@@ -1,0 +1,13 @@
+file_format: "1"
+id: chippy
+name: chippy 
+type: shield
+url: https://github.com/benvallack/zmk-config-enki42
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+siblings:
+  - chippy_left
+  - chippy_right
+  - chippy_dongle
