@@ -1,8 +1,13 @@
-if SHIELD_CHIPPY_LEFT
+
+
+if SHIELD_CHIPPY_DONGLE || SHIELD_CHIPPY_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Chippy Left"
-
+	default "Chippy Dongle"
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y	
+config ZMK_USB
+	default y
 endif
 
 if SHIELD_CHIPPY_RIGHT
@@ -11,18 +16,6 @@ config ZMK_KEYBOARD_NAME
 	default "Chippy Right"
 	
 endif
-
-if SHIELD_CHIPPY_DONGLE
-
-config ZMK_KEYBOARD_NAME
-	default "Chippy Dongle"
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
-	
-config ZMK_USB
-	default y
-endif
-
 
 if SHIELD_CHIPPY_LEFT || SHIELD_CHIPPY_RIGHT || SHIELD_CHIPPY_DONGLE
 
